@@ -1,6 +1,6 @@
 ### Intellij ###
-.idea/*
+# .idea/*
 out/
 
 ### Intellij Patch ###
-*.iml
+# *.iml

@@ -1,3 +1,5 @@
+package main.kotlin
+
 fun main() {
     // Datos Tipo Primitivos
     println(1 + 1)
