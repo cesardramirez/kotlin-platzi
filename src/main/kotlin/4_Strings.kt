@@ -2,7 +2,7 @@ package main.kotlin
 
 fun main() {
     val nombre = "Cesar"
-    val apellido: String = "Ramírez"
+    val apellido: String = "Ramírez"  // Definición explícita (String)
     val edad: Int = 32
 
     println("Tu nombre es $nombre $apellido y tu \"edad\" es $edad años\n")

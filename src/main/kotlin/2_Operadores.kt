@@ -9,22 +9,22 @@ fun main() {
     println(7 % 2)
     println()
 
-    // Kotlin : Variable tratada como Objeto
+    // Kotlin : Variable inmutable tratada como Objeto
     val a = 4
     val b = 2
 
-    println(a.plus(b))
+    println(a.plus(b))  // +
     println(a.minus(b))
     println(a.times(b))
     println(a.div(b))
     println(a.rem(b))
 
     val c = -2
-    val d = c.unaryMinus()
+    val d = c.unaryMinus()  // -c => -(-2) = 2
     println("d: $d")  // Cambia el signo.
 
     val e = true
-    val f = e.not()
+    val f = e.not()  // !e => false
     println("f: $f")  // Cambia el booleano.
 
     val g = 6
@@ -37,7 +37,7 @@ fun main() {
     val mapTwo = mutableMapOf(4 to "D", 5 to "Lo que sigue luego de la D")
 
     println("mapOne : ".plus(mapOne))
-    println("mapOne : ".plus(mapTwo))
-    mapOne.plusAssign(mapTwo)
+    println("mapTwo : ".plus(mapTwo))
+    mapOne.plusAssign(mapTwo)  // #=
     println("mapOneTwo : ".plus(mapOne))
 }

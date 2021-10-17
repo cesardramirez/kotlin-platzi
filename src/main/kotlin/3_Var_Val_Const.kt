@@ -1,17 +1,17 @@
 package main.kotlin
 
 // Variables globales.
-var x = 7  // Mala práctica, las variables mutables deberian definirse main.kotlin.main.kotlin.main.kotlin.main.kotlin.y modificarse dentro de las funciones.
-const val y = 8  // Buenas prácticas. Variable inmutable que se define en tiempo de compilación.
+var x = 7  // Mala práctica. Variables mutables. Deberían definirse y modificarse dentro de las funciones.
+const val y = 8  // (final static) Buenas prácticas. Variable inmutable. Se define en tiempo de compilación.
 
 fun main(args: Array<String>) {
-    val a = 4  // Variables inmutables.
+    val a = 4  // (final) Buena práctica. Variables inmutables. Se definen en tiempo de ejecución.
     val b = 2
-    var n = 3 // EL IDE indica que La variable nunca se modifica (inmutable) main.kotlin.main.kotlin.main.kotlin.main.kotlin.y se puede declarar usando 'val'.
+    var n = 3 // EL IDE indica que la variable nunca se modifica (inmutable) y se puede declarar usando 'val'.
 
     x = 5
 
-    val name = args[0]  // Variable inmutable que se define en tiempo de ejecución.
+    val name = args[0]  // Se debe definir un valor en Program Arguments.
     println(name)
 
     println(a)
