@@ -1,7 +1,6 @@
 package main.kotlin
 
 fun main() {
-    /*
     // Break
     println("\nBreak")
     """ El primer ciclo lo hará 3 veces.
@@ -96,7 +95,6 @@ fun main() {
             }
         }
     }
-    */
 
     // Esto es lo mismo...
     nombre@ for (i in 1..3) {
