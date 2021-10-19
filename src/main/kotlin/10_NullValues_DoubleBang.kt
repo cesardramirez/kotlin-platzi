@@ -14,10 +14,12 @@ fun main() {
     // Ahora
     println(numero?.div(2))  // No realiza la operación y por defecto imprime el valor null.
 
-    val listWithNulls: List<String?> = listOf("Kotlin", null, "Yeih")
+    val listWithNulls: List<String?> = listOf("Kotlin", null, "Yeih", null)
     for (item in listWithNulls) {
         item?.let { print("$it \t") }  // Imprime sólo los valores no nulos.
     }
+    println()
+    println(listWithNulls.filterNotNull())  // [Kotlin, Yeih]
 
     println()
     println(dato?.inc())  // Si el valor es null, cualquier método adicional que se llame (por defecto) su resultado será null.
