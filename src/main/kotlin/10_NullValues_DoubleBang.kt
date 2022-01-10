@@ -19,7 +19,7 @@ fun main() {
         item?.let { print("$it \t") }  // Imprime sólo los valores no nulos.
     }
     println()
-    println(listWithNulls.filterNotNull())  // [Kotlin, Yeih]
+    println(listWithNulls.filterNotNull())  // Otra forma de imprimir los valoes no nulos. [Kotlin, Yeih]
 
     println()
     println(dato?.inc())  // Si el valor es null, cualquier método adicional que se llame (por defecto) su resultado será null.
