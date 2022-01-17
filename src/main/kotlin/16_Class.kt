@@ -15,9 +15,8 @@ fun main() {
     println()
 
     val camera = Camera()
-    println(camera.isOn)
     camera.turnOn()
-    println("La cámara esta ${if (camera.isOn) "encendida" else "apagada"}")
+    println(camera.cameraStatus())
     camera.turnOff()
-    println("La cámara esta ${if (camera.isOn) "encendida" else "apagada"}")
+    println(camera.cameraStatus())
 }
