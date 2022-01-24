@@ -2,6 +2,7 @@ package main.kotlin
 
 import main.kotlin.model.Camera
 import main.kotlin.model.NestedClassesExample
+import main.kotlin.model.Shoe
 
 fun main() {
     val obj1 = NestedClassesExample.NestedClass().methodNested()
@@ -16,7 +17,20 @@ fun main() {
 
     val camera = Camera()
     camera.turnOn()
-    println(camera.cameraStatus())
+    println(camera.getCameraStatus())
     camera.turnOff()
-    println(camera.cameraStatus())
+    println(camera.getCameraStatus())
+
+    camera.setResolution(1000)
+    println("Resolution: ${camera.getResolution()}")
+
+    println()
+
+    val shoe = Shoe()
+    shoe.size = 34
+    println(shoe.size)
+
+    shoe.model = "Tenis"
+    println(shoe.model)
+
 }
