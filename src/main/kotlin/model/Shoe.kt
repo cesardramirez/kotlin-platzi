@@ -1,6 +1,14 @@
 package main.kotlin.model
 
-class Shoe {
+class Shoe(var sku: Int, var mark: String) {  // Valores mínimos a definir para la clase.
+
+    init {  // Apenas se instancie la clase, se va a ejecutar lo que está en init.
+        println("Sku Id: $sku \tMark: $mark")
+    }
+
+    constructor(sku: Int, mark: String, color: String) : this(sku, mark) {
+        this.color = color
+    }
 
     var size: Int = 34
         set(value) {
