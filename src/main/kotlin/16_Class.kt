@@ -27,20 +27,21 @@ fun main() {
 
     println()
 
-    val shoe = Shoe(12345, "Praga")
+    val shoe = Shoe("shoe", "desc 1", 12345, "Praga")
     shoe.size = 34
     println(shoe.size)
     shoe.model = "Tenis"
     println(shoe.model)
     println(shoe.sku)
-    println(shoe.mark)
 
-    val shoe2 = Shoe(7894, "Converse", "Green")
+    val shoe2 = Shoe("shoe", "desc 2", 7894, "Converse", "Green")
     println(shoe2.color)
+    println(shoe2)
+    println(shoe2.create())  // Create Shoe
 
     println()
 
     val movie = Movie("Coco", "Pixar", 120)
     println(movie.toString())  // Movie(title=Coco, creator=Pixar, duration=120)
-
+    println(movie)  // Por defecto llama al toString()
 }

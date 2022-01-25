@@ -1,13 +1,42 @@
 package main.kotlin.model
 
-class Shoe(var sku: Int, var mark: String) {  // Valores mínimos a definir para la clase.
+class Shoe(
+    name: String,
+    description: String,
+    sku: Int,
+    var brand: String  // Variable propia de Shoe y definida en el constructor principal.
+) : Product (
+    name,
+    description,
+    sku
+) {  // Valores mínimos a definir para la clase.
 
     init {  // Apenas se instancie la clase, se va a ejecutar lo que está en init.
-        println("Sku Id: $sku \tMark: $mark")
+        println("Sku Id: $sku \tBrand: $brand")
     }
 
-    constructor(sku: Int, mark: String, color: String) : this(sku, mark) {
-        this.color = color
+    constructor(name: String, description: String, sku: Int, brand: String, color: String) : this(name, description, sku, brand) {
+        this.color = color  // Se agrega color para el constructor secundario.
+    }
+
+    override fun toString(): String {
+        return super.toString() + "\tBrand: $brand \tModel: $model, \tColor: $color \tSize: $size"
+    }
+
+    override fun create(): String {
+        return "Create Shoe"
+    }
+
+    override fun read(): String {
+        return "Read Shoe"
+    }
+
+    override fun update(): String {
+        return "Update Shoe"
+    }
+
+    override fun delete(): String {
+        return "Delete Shoe"
     }
 
     var size: Int = 34
