@@ -1,6 +1,6 @@
 package main.kotlin.model
 
-open class Product(
+abstract class Product(
     var name: String,
     var description: String,
     var sku: Int
@@ -9,19 +9,11 @@ open class Product(
         return "Name: $name \tDescription: $description \tSKU: $sku"
     }
 
-    open fun create(): String {
-        return "Create"
-    }
+    abstract fun create(): String
 
-    open fun read(): String {
-        return "Read"
-    }
+    abstract fun read(): String
 
-    open fun update(): String {
-        return "Update"
-    }
+    abstract fun update(): String
 
-    open fun delete(): String {
-        return "Delete"
-    }
+    abstract fun delete(): String
 }
