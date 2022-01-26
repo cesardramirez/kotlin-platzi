@@ -9,7 +9,7 @@ class Shoe(
     name,
     description,
     sku
-) {  // Valores mínimos a definir para la clase.
+), ICrudActions {  // Valores mínimos a definir para la clase.
 
     init {  // Apenas se instancie la clase, se va a ejecutar lo que está en init.
         println("Sku Id: $sku \tBrand: $brand")
@@ -21,22 +21,6 @@ class Shoe(
 
     override fun toString(): String {
         return super.toString() + "\tBrand: $brand \tModel: $model, \tColor: $color \tSize: $size"
-    }
-
-    override fun create(): String {
-        return "Create Shoe"
-    }
-
-    override fun read(): String {
-        return "Read Shoe"
-    }
-
-    override fun update(): String {
-        return "Update Shoe"
-    }
-
-    override fun delete(): String {
-        return "Delete Shoe"
     }
 
     var size: Int = 34
@@ -58,4 +42,20 @@ class Shoe(
                 field = value  // field hace referencia al valor de model.
         }
         get() = field  // Indica que es redundante, ya que no se está haciendo cambios a la variable.
+
+    override fun create(): String {
+        return "Create Shoe"
+    }
+
+    override fun read(): String {
+        return "Read Shoe"
+    }
+
+    override fun update(): String {
+        return "Update Shoe"
+    }
+
+    override fun delete(): String {
+        return "Delete Shoe"
+    }
 }

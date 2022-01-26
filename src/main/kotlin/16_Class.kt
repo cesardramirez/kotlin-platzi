@@ -38,6 +38,7 @@ fun main() {
     println(shoe2.color)
     println(shoe2)
     println(shoe2.create())  // Create Shoe
+    shoe2.saludar("texto")  // Método interface saludar(): texto
 
     println()
 

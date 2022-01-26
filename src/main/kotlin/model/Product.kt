@@ -8,12 +8,4 @@ abstract class Product(
     override fun toString(): String {
         return "Name: $name \tDescription: $description \tSKU: $sku"
     }
-
-    abstract fun create(): String
-
-    abstract fun read(): String
-
-    abstract fun update(): String
-
-    abstract fun delete(): String
 }
