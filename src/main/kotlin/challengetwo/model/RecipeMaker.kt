@@ -77,7 +77,7 @@ class RecipeMaker(
 
             when (option) {
                 in 1..8 -> {
-                    recipe.add(ingredients[option!!.dec()].toString())
+                    recipe.add(ingredients[option!!.dec()])
                 }
                 9 -> {
                     recipes[recipes.size] = recipe
